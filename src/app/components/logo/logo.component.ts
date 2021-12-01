@@ -4,6 +4,7 @@ import {
   Component,
   ElementRef,
   HostBinding,
+  Input,
 } from '@angular/core';
 
 @Component({
@@ -13,11 +14,13 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LogoComponent implements AfterViewInit {
+  logoText: string = 'Oscar Saca';
+
+  @Input() animate!: boolean;
+
   @HostBinding('class') get addClasses() {
     return `nlf-middle`;
   }
-
-  logoText = 'Oscar Saca';
 
   constructor(private elementRef: ElementRef) {}
 
@@ -26,6 +29,8 @@ export class LogoComponent implements AfterViewInit {
   }
 
   onLoad(): void {
-    this.elementRef.nativeElement.classList.add('animate');
+    this.animate === true
+      ? this.elementRef.nativeElement.classList.add('animate')
+      : this.elementRef.nativeElement.classList.add(`no-animation`);
   }
 }

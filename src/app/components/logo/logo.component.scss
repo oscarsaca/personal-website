@@ -21,7 +21,8 @@
   transition: stroke-dashoffset 1.2s linear 0s;
 }
 
-.animate:host [class*="bg-"] {
+.animate:host [class*="bg-"],
+.no-animation:host [class*="bg-"] {
   stroke-dashoffset: 0;
 }
 
@@ -33,7 +34,13 @@
   transition: transform 1s ease 1s, opacity 1s ease 1s;
 }
 
-.animate:host strong {
+.animate:host strong,
+.no-animation:host strong {
   transform: translateY(0);
   opacity: 1;
+}
+
+.no-animation:host strong,
+.no-animation:host [class*="bg-"] {
+  transition: none;
 }

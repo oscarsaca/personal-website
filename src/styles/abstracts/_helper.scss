@@ -1,0 +1,74 @@
+.hd {
+  display: none !important;
+}
+
+.hdn {
+  overflow: hidden;
+}
+
+.rel {
+  position: relative;
+}
+
+.m-ato {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-ato {
+  margin-top: auto;
+}
+
+.d\: {
+  &blk {
+    display: block;
+  }
+  &inl-blk {
+    display: block;
+  }
+}
+
+.ta\: {
+  &l {
+    text-align: left;
+  }
+  &r {
+    text-align: right;
+  }
+  &c {
+    text-align: center;
+  }
+}
+
+.bg {
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+}
+
+.psu-bfr::before,
+.psu-aft::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.pc-out {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  position: absolute;
+}
+
+.usr-scl {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

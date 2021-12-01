@@ -1,5 +1,4 @@
 :host {
-  --lnk-mg: 1.364em;
   position: absolute;
   width: 100%;
   top: 0;
@@ -8,14 +7,17 @@
   padding: var(--hdr-tp) var(--hdr-hp) 0;
 }
 
-app-navigation-link + app-navigation-link {
-  margin-left: var(--lnk-mg);
-}
-
 // 501px Responsive (min-width)
 @media screen and (min-width: 501px) {
   :host {
     --hdr-tp: 2em;
+  }
+}
+
+// 801px Responsive (min-width)
+@media screen and (min-width: 801px) {
+  app-navigation-link + app-navigation-link {
+    margin-left: 1.364em;
   }
 }
 

@@ -1,0 +1,12 @@
+a {
+  transition: color var(--g-trs), text-shadow var(--g-trs);
+  text-shadow: none;
+}
+
+a:hover,
+a:focus {
+  text-shadow: 0 0 0.227em var(--light), 0 0 0.455em var(--light),
+    0 0 0.682em var(--light), 0 0 0.909em var(--accent-dark),
+    0 0 1.591em var(--accent-dark), 0 0 1.818em var(--accent-dark),
+    0 0 2.273em var(--accent-dark), 0 0 3.409em var(--accent-dark);
+}

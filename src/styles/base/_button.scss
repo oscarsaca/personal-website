@@ -10,7 +10,6 @@
   --btn-trs-t: 0.3s;
 }
 
-// standard
 .btn {
   font-size: var(--mn-fs);
   line-height: var(--btn-lh);
@@ -29,42 +28,10 @@
   transition: background-position var(--btn-trs-t) ease 0s;
 }
 
-// skip to content
-.skp-btn {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 10;
-  will-change: opacity, transform;
-  opacity: 0;
-  transform: translateY(calc(-100% - 2em));
-  transition: transform var(--btn-trs-t) ease 0s,
-    opacity var(--btn-trs-t) ease 0s,
-    background-position var(--btn-trs-t) ease calc(var(--btn-trs-t) * 2);
-}
-
-.skp-btn:focus {
-  opacity: 1;
-  transform: none;
-}
-
 // 1025px Responsive (min-width)
 @media screen and (min-width: 1025px) {
   .btn:not(.skp-btn):hover,
   .btn:not(.skp-btn):focus {
     background-position: calc(var(--btn-bp) * 0.5) calc(var(--btn-bp) * 0);
-  }
-}
-
-// 800px Responsive (max-width)
-@media screen and (max-width: 800px) {
-  .skp-btn {
-    left: 50%;
-    transform: translate(-50%, calc(-100% - 1em));
-  }
-
-  .skp-btn:focus {
-    opacity: 1;
-    transform: translate(-50%, 0);
   }
 }

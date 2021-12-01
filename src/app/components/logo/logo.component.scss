@@ -1,24 +1,24 @@
 .lg {
   width: 2.045em;
   height: 2.045em;
-}
 
-.lg path,
-.lg circle {
-  fill: transparent;
-  stroke-width: 30;
-}
+  path,
+  circle {
+    fill: transparent;
+    stroke-width: 30;
+  }
 
-.lg .bg-o {
-  stroke-dasharray: 1262;
-  stroke-dashoffset: 1262;
-  transition: stroke-dashoffset 0.8s linear 0.4s;
-}
+  .bg-o {
+    stroke-dasharray: 1262;
+    stroke-dashoffset: 1262;
+    transition: stroke-dashoffset 0.8s linear 0.4s;
+  }
 
-.lg .bg-s {
-  stroke-dasharray: 1259;
-  stroke-dashoffset: 1259;
-  transition: stroke-dashoffset 1.2s linear 0s;
+  .bg-s {
+    stroke-dasharray: 1259;
+    stroke-dashoffset: 1259;
+    transition: stroke-dashoffset 1.2s linear 0s;
+  }
 }
 
 .animate:host [class*="bg-"],

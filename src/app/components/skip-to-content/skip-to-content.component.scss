@@ -1,0 +1,39 @@
+// skip to content
+:host {
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+}
+
+.skp-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(calc(-100% - 2em));
+  transition: transform var(--btn-trs-t) ease 0s,
+    opacity var(--btn-trs-t) ease 0s,
+    background-position var(--btn-trs-t) ease calc(var(--btn-trs-t) * 2);
+
+  &:focus {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// 800px Responsive (max-width)
+@media screen and (max-width: 800px) {
+  .skp-btn {
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 1em));
+
+    &:focus {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+}

@@ -1,0 +1,62 @@
+<!-- Logo SVG -->
+<svg class="lg" viewBox="0 0 500 450" width="500" height="450">
+  <g filter="url(#shadow)" stroke="url(#gradient)">
+    <circle class="bg-o" cx="248.8" cy="225" r="200.8"></circle>
+    <path
+      class="bg-s"
+      d="M 73.2 322.6 L 40 345.2 c -44.3 34.2 5 100.2 56.4 64.6 L 338 271.6 c 35.1 -18.6 2 -96.1 -43.6 -69.7 l -93.6 44.5 c -39.2 18.9 -77.9 -50.6 -44.1 -69.7 L 404.2 38.5 c 50.4 -33 100.6 20.7 56.3 60.6 c -16.1 14.5 -36.4 27.7 -36.4 27.7"
+    ></path>
+  </g>
+</svg>
+
+<!-- Title -->
+<strong class="ttl-1">{{ logoText }}</strong>
+
+<!-- Gradient & Animation -->
+<svg class="pc-out">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="8" dy="8" stdDeviation="2"></feDropShadow>
+    </filter>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e79aaf"></stop>
+      <stop offset="100%" stop-color="#fb1496"></stop>
+    </linearGradient>
+    <linearGradient id="gradient-2" x1="0%" x2="0%" y1="100%" y2="0%">
+      <stop offset="0%" stop-color="currentColor">
+        <animate
+          attributeName="stop-color"
+          values="#fb1496; #E79AAF; #fb1496"
+          dur="2s"
+          repeatCount="indefinite"
+        ></animate>
+      </stop>
+      <stop offset="100%" stop-color="currentColor">
+        <animate
+          attributeName="stop-color"
+          values="#E79AAF; #fb1496; #E79AAF"
+          dur="2s"
+          repeatCount="indefinite"
+        ></animate>
+      </stop>
+    </linearGradient>
+    <linearGradient id="gradient-3" x1="0%" x2="0%" y1="100%" y2="0%">
+      <stop offset="0%" stop-color="currentColor">
+        <animate
+          attributeName="stop-color"
+          values="#fb1496; #E79AAF; #fb1496"
+          dur="5s"
+          repeatCount="indefinite"
+        ></animate>
+      </stop>
+      <stop offset="100%" stop-color="currentColor">
+        <animate
+          attributeName="stop-color"
+          values="#E79AAF; #fb1496; #E79AAF"
+          dur="5s"
+          repeatCount="indefinite"
+        ></animate>
+      </stop>
+    </linearGradient>
+  </defs>
+</svg>

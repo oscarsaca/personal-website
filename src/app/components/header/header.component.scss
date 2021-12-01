@@ -1,10 +1,15 @@
 :host {
+  --lnk-mg: 1.364em;
   position: absolute;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 5;
   padding: var(--hdr-tp) var(--hdr-hp) 0;
+}
+
+app-navigation-link + app-navigation-link {
+  margin-left: var(--lnk-mg);
 }
 
 // 501px Responsive (min-width)

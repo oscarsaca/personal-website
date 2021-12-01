@@ -1,1 +1,10 @@
+<!-- Logo -->
 <app-logo [animate]="true"></app-logo>
+
+<!-- Navigation -->
+<nav class="nlf-middle">
+  <app-navigation-link
+    [link]="link"
+    *ngFor="let link of links"
+  ></app-navigation-link>
+</nav>

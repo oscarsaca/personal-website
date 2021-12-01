@@ -29,7 +29,7 @@ export class LogoComponent implements AfterViewInit {
   }
 
   onLoad(): void {
-    this.animate === true
+    this.animate
       ? this.elementRef.nativeElement.classList.add('animate')
       : this.elementRef.nativeElement.classList.add(`no-animation`);
   }

@@ -44,3 +44,9 @@
 .no-animation:host [class*="bg-"] {
   transition: none;
 }
+// 1200px Responsive (max-width)
+@media screen and (max-width: 1200px) {
+  .lg {
+    font-size: var(--font-bump);
+  }
+}

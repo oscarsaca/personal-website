@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+// base
+@use "./styles/base/_reset";
+@use "./styles/base/_base";
+@use "./styles/base/_typography";
+
+// abstracts
+@use "./styles/abstracts/_color";
+@use "./styles/abstracts/_variables";
+@use "./styles/abstracts/_helper";
+
+// layout
+@use "./styles/layout/_flex";
+@use "./styles/layout/_spacing";

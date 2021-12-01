@@ -1,0 +1,113 @@
+// import
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&family=Montserrat&display=swap");
+
+// variables
+:root {
+  --lh: 2.308;
+  --fw: 400;
+
+  --mn-f: "Heebo", sans-serif;
+  --ttl-f: "Montserrat", sans-serif;
+
+  --mn-fs: 13px;
+
+  --ttl-1-fs: 1.364rem;
+  --ttl-1-lh: 1;
+  --ttl-1-fw: 400;
+  --ttl-1-tt: uppercase;
+  --ttl-1-ls: 0.2em;
+
+  --ttl-1-sm-fs: 1rem;
+
+  --ttl-2-lh: 1.4;
+  --ttl-2-fw: 400;
+  --ttl-2-tt: uppercase;
+  --ttl-2-ls: 0.2em;
+
+  --ttl-2-sub-fw: 700;
+}
+
+// body and default
+html {
+  font-size: 1.145835vw;
+}
+
+body {
+  font-family: var(--mn-f);
+  line-height: var(--lh);
+  font-weight: var(--fw);
+}
+
+.mf {
+  display: block;
+  margin: 0;
+  font-size: var(--mn-fs);
+  font-style: normal;
+}
+
+[class*="ttl-"] {
+  display: block;
+}
+
+// titles
+.ttl-1 {
+  font-family: var(--ttl-f);
+  font-size: var(--ttl-1-fs);
+  font-weight: var(--ttl-1-fw);
+  line-height: var(--ttl-1-lh);
+  letter-spacing: var(--ttl-1-ls);
+  text-transform: var(--ttl-1-tt);
+}
+
+.ttl-1.sm {
+  font-size: var(--ttl-1-sm-fs);
+}
+
+.ttl-2 {
+  font-size: var(--mn-f-size);
+  line-height: var(--ttl-2-lh);
+  font-weight: var(--ttl-2-fw);
+  letter-spacing: var(--ttl-2-ls);
+  text-transform: var(--ttl-2-tt);
+}
+
+.ttl-2.dft {
+  line-height: var(--lh);
+}
+
+.ttl-2.sub {
+  font-weight: var(--ttl-2-sub-fw);
+}
+
+// 1921px Responsive (min-width)
+@media screen and (min-width: 1921px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+// 1200px Responsive (max-width)
+@media screen and (max-width: 1200px) {
+  :root {
+    --ttl-1-fs: 1.667rem;
+    --ttl-1-sm-fs: 1.222rem;
+  }
+
+  html {
+    font-size: calc(14px + (17 - 14) * ((100vw - 801px) / (1200 - 801)));
+  }
+}
+
+// 800px Responsive (max-width)
+@media screen and (max-width: 800px) {
+  html {
+    font-size: calc(16px + (18 - 16) * ((100vw - 501px) / (800 - 501)));
+  }
+}
+
+// 500px Responsive (max-width)
+@media screen and (max-width: 500px) {
+  html {
+    font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (500 - 320)));
+  }
+}

@@ -1,0 +1,66 @@
+:root {
+  --vp: 3em;
+  --hp: 4%;
+  --vm: 2.5em;
+}
+
+.vp\: {
+  padding-top: var(--vp);
+  padding-bottom: var(--vp);
+
+  &sm {
+    padding-top: calc(var(--vp) * 0.5);
+    padding-bottom: calc(var(--vp) * 0.5);
+  }
+
+  &tn {
+    padding-top: calc(var(--vp) * 0.3562);
+    padding-bottom: calc(var(--vp) * 0.3562);
+  }
+
+  &lg {
+    padding-top: calc(var(--vp) * 1.088);
+    padding-bottom: calc(var(--vp) * 1.088);
+  }
+}
+
+.hp\: {
+  padding-left: var(--hp);
+  padding-right: var(--hp);
+
+  &sm {
+    padding-left: calc(var(--hp) * 0.5);
+    padding-right: calc(var(--hp) * 0.5);
+  }
+}
+
+.mt\: {
+  margin-top: var(--vm);
+
+  &sm {
+    margin-top: calc(var(--vm) * 0.5);
+  }
+
+  &lg {
+    margin-top: calc(var(--vm) * 1.2);
+  }
+}
+
+.mb\: {
+  margin-bottom: var(--vm);
+
+  &sm {
+    margin-bottom: calc(var(--vm) * 0.5);
+  }
+
+  &lg {
+    margin-bottom: calc(var(--vm) * 1.2);
+  }
+}
+
+// 650px Responsive (max-width)
+@media screen and (max-width: 650px) {
+  :root {
+    --hp: 6%;
+  }
+}

@@ -1,0 +1,52 @@
+:host {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  padding: var(--hdr-tp) var(--hdr-hp) 0;
+}
+
+// 1025px Responsive (min-width)
+@media screen and (min-width: 1025px) {
+  :host {
+    --hdr-tp: 2.182em;
+  }
+}
+
+// 1201px Responsive (min-width)
+@media screen and (min-width: 1201px) {
+  :host {
+    --hdr-hp: 3.636em;
+  }
+}
+
+// 1921px Responsive (min-width)
+@media screen and (min-width: 1921px) {
+  :host {
+    max-width: 1920px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// 1200px Responsive (max-width)
+@media screen and (max-width: 1200px) {
+  :host {
+    --hdr-hp: var(--hp);
+  }
+}
+
+// 501px Responsive (min-width) & 1024px (max-width)
+@media screen and (max-width: 1024px) and (min-width: 501px) {
+  :host {
+    --hdr-tp: 2em;
+  }
+}
+
+// 500px Responsive (max-width)
+@media screen and (max-width: 500px) {
+  :host {
+    --hdr-tp: 1.778em;
+  }
+}

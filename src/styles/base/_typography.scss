@@ -1,30 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&family=Montserrat&display=swap");
 
-:root {
-  --lh: 2.308;
-  --fw: 400;
-
-  --mn-f: "Heebo", sans-serif;
-  --ttl-f: "Montserrat", sans-serif;
-
-  --mn-fs: 13px;
-
-  --ttl-1-fs: 1.364rem;
-  --ttl-1-lh: 1;
-  --ttl-1-fw: 400;
-  --ttl-1-tt: uppercase;
-  --ttl-1-ls: 0.2em;
-
-  --ttl-1-sm-fs: 1rem;
-
-  --ttl-2-lh: 1.4;
-  --ttl-2-fw: 400;
-  --ttl-2-tt: uppercase;
-  --ttl-2-ls: 0.2em;
-
-  --ttl-2-sub-fw: 700;
-}
-
 // body and default
 html {
   font-size: 1.145835vw;
@@ -86,11 +61,6 @@ body {
 
 // 1200px Responsive (max-width)
 @media screen and (max-width: 1200px) {
-  :root {
-    --ttl-1-fs: 1.667rem;
-    --ttl-1-sm-fs: 1.222rem;
-  }
-
   html {
     font-size: calc(14px + (17 - 14) * ((100vw - 801px) / (1200 - 801)));
   }

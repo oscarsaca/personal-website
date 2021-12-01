@@ -15,7 +15,7 @@ html {
 }
 
 a:not([class*="btn"]) {
-  transition: color 0.3s ease 0s;
+  transition: color var(--g-trs);
 }
 
 // sizes
@@ -116,15 +116,15 @@ img[style*=".jpg"] {
   overflow: auto;
 }
 
-.drk-bg .scroll::-webkit-scrollbar {
-  width: var(--thicc-border);
+.scroll::-webkit-scrollbar {
+  width: var(--bdr-tqq);
 }
 
-.drk-bg .scroll::-webkit-scrollbar-thumb {
+.scroll::-webkit-scrollbar-thumb {
   background: var(--accent-dark);
 }
 
-.drk-bg .scroll::-webkit-scrollbar-track {
+.scroll::-webkit-scrollbar-track {
   background: var(--secondary-dark);
 }
 
@@ -148,11 +148,11 @@ img[style*=".jpg"] {
 
 // 1025px Responsive (min-width)
 @media screen and (min-width: 1025px) {
-  .pew-pew {
+  .fun-cursor {
     cursor: url("/assets/pew-pew.png") 25 25, auto;
   }
 
-  .pew-pew:active {
+  .fun-cursor:active {
     cursor: url("/assets/boom-boom.png") 22 20, auto;
   }
 
@@ -170,10 +170,10 @@ img[style*=".jpg"] {
     left: 50%;
     padding: 0.75em;
     font-size: 0.6em;
-    font-weight: var(--title-style-2-font-weight);
-    letter-spacing: var(--title-style-2-letter-spacing);
-    text-transform: var(--title-style-2-text-transform);
     line-height: 1;
+    font-weight: var(--ttl-2-fw);
+    text-transform: var(--ttl-2-tt);
+    letter-spacing: var(--ttl-2-ls);
     color: var(--light);
     background-color: var(--primary-dark);
     border: solid 1px var(--accent-dark);
@@ -181,7 +181,7 @@ img[style*=".jpg"] {
     transform: translate(-50%, -0.5em);
     visibility: hidden;
     will-change: opacity, transform, visibility;
-    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s,
+    transition: opacity var(--g-trs), transform var(--g-trs),
       visibility 0s ease 0.3s;
   }
 
@@ -190,7 +190,7 @@ img[style*=".jpg"] {
     opacity: 1;
     transform: translate(-50%, 0);
     visibility: visible;
-    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s,
+    transition: opacity var(--g-trs), transform var(--g-trs),
       visibility 0s ease 0s;
   }
 
@@ -298,6 +298,6 @@ img[style*=".jpg"] {
   }
 
   [class*="blk-650"][class*="-mdg"] > * + * {
-    margin-top: calc(var(--vertical-spacing) * 0.7);
+    margin-top: calc(var(--vm) * 0.7);
   }
 }

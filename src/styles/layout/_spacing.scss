@@ -1,9 +1,3 @@
-:root {
-  --vp: 3em;
-  --hp: 4%;
-  --vm: 2.5em;
-}
-
 .vp\: {
   padding-top: var(--vp);
   padding-bottom: var(--vp);
@@ -55,12 +49,5 @@
 
   &lg {
     margin-bottom: calc(var(--vm) * 1.2);
-  }
-}
-
-// 650px Responsive (max-width)
-@media screen and (max-width: 650px) {
-  :root {
-    --hp: 6%;
   }
 }

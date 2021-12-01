@@ -3,6 +3,12 @@
   --mn-w: 79.6467rem; // main width
   --bdr-tqq: 3px; // thiqq border
   --bdr-tn: 2px; // thin border
+  --g-trs: 0.3s ease 0s;
+
+  //spacing
+  --vp: 3em;
+  --hp: 4%;
+  --vm: 2.5em;
 
   // sizes
   --full: 100%;
@@ -11,4 +17,55 @@
   --two-thirds: 66.667%;
   --fourth: 25%;
   --three-fourths: 75%;
+
+  // colors
+  --primary-dark: #282843;
+  --secondary-dark: #313154;
+  --primary-light: #9595b8;
+  --secondary-light: #ffffff;
+  --accent-light: #e79aaf;
+  --accent-dark: #fb1496;
+  --accent-fallback: #e75d9f;
+  --light: #ffffff;
+  --dark: #25253e;
+  --dark-alt: #191f24;
+
+  //typography
+  --lh: 2.308;
+  --fw: 400;
+
+  --mn-f: "Heebo", sans-serif;
+  --ttl-f: "Montserrat", sans-serif;
+
+  --mn-fs: 13px;
+
+  --ttl-1-fs: 1.364rem;
+  --ttl-1-lh: 1;
+  --ttl-1-fw: 400;
+  --ttl-1-tt: uppercase;
+  --ttl-1-ls: 0.2em;
+
+  --ttl-1-sm-fs: 1rem;
+
+  --ttl-2-lh: 1.4;
+  --ttl-2-fw: 400;
+  --ttl-2-tt: uppercase;
+  --ttl-2-ls: 0.2em;
+
+  --ttl-2-sub-fw: 700;
+}
+
+// 1200px Responsive (max-width)
+@media screen and (max-width: 1200px) {
+  :root {
+    --ttl-1-fs: 1.667rem;
+    --ttl-1-sm-fs: 1.222rem;
+  }
+}
+
+// 650px Responsive (max-width)
+@media screen and (max-width: 650px) {
+  :root {
+    --hp: 6%;
+  }
 }

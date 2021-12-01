@@ -7,5 +7,7 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  @HostBinding('class.dp:blk') block = true;
+  @HostBinding('class') get addClasses() {
+    return `dp:blk nlf-middle-between`;
+  }
 }

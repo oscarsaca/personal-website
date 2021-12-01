@@ -1,0 +1,70 @@
+:root {
+  --btn-lh: 1.2;
+  --btn-fw: 400;
+  --btn-tt: uppercase;
+  --btn-ls: 0.2em;
+  --btn-vp: 1em;
+  --btn-hp: 2em;
+  --btn-bs: 200%;
+  --btn-bp: 100%;
+  --btn-trs-t: 0.5s;
+}
+
+// standard
+.btn {
+  font-size: var(--mn-fs);
+  line-height: var(--btn-lh);
+  font-weight: var(--btn-fw);
+  text-transform: var(--btn-tt);
+  letter-spacing: var(--btn-ls);
+  padding: var(--btn-vp) var(--btn-hp);
+  background-size: var(--btn-bs) calc(var(--btn-bs) / 2);
+  background-position: calc(var(--btn-bp) * 0) calc(var(--btn-bp) * 0);
+  color: var(--light);
+  background-image: linear-gradient(
+    to right,
+    var(--primary-dark),
+    var(--accent-dark)
+  );
+  transition: background-position var(--btn-trs-t) ease 0s;
+}
+
+// skip to content
+.skp-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(calc(-100% - 2em));
+  transition: transform var(--btn-trs-t) ease 0s,
+    opacity var(--btn-trs-t) ease 0s,
+    background-position var(--btn-trs-t) ease calc(var(--btn-trs-t) * 2);
+}
+
+.skp-btn:focus {
+  opacity: 1;
+  transform: none;
+}
+
+// 1025px Responsive (min-width)
+@media screen and (min-width: 1025px) {
+  .btn:not(.skp-btn):hover,
+  .btn:not(.skp-btn):focus {
+    background-position: calc(var(--btn-bp) * 0.5) calc(var(--btn-bp) * 0);
+  }
+}
+
+// 800px Responsive (max-width)
+@media screen and (max-width: 800px) {
+  .skp-btn {
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 1em));
+  }
+
+  .skp-btn:focus {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

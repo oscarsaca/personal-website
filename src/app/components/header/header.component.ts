@@ -24,6 +24,6 @@ export class HeaderComponent {
   ];
 
   @HostBinding('class') get addClasses() {
-    return `dp:blk nlf-middle-between`;
+    return `dp:blk nlf-middle-between ctr-800`;
   }
 }

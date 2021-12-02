@@ -58,11 +58,19 @@
   --ttl-2-sub-fw: 700;
 }
 
+// 1201px Responsive (min-width)
+@media screen and (min-width: 1201px) {
+  :root {
+    --bdr-sz: 7.727rem;
+  }
+}
+
 // 1200px Responsive (max-width)
 @media screen and (max-width: 1200px) {
   :root {
     --ttl-1-fs: 1.667rem;
     --ttl-1-sm-fs: 1.222rem;
+    --bdr-sz: 4em;
   }
 }
 

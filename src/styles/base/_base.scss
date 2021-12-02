@@ -245,15 +245,15 @@ img[style*=".jpg"] {
 // 1024px Responsive (max-width)
 @media screen and (max-width: 1024px) {
   [class*="blk-1024"] {
-    display: block;
+    display: block !important;
   }
 
   [class*="blk-1024"] > * {
-    width: 100%;
+    width: 100% !important;
   }
 
   [class*="blk-1024"][class*="-mdg"] > * + * {
-    margin-top: var(--vm);
+    margin-top: var(--vm) !important;
   }
 
   .ctr-1024 {
@@ -291,14 +291,14 @@ img[style*=".jpg"] {
 // 650px Responsive (max-width)
 @media screen and (max-width: 650px) {
   [class*="blk-650"] {
-    display: block;
+    display: block !important;
   }
 
   [class*="blk-650"] > * {
-    width: 100%;
+    width: 100% !important;
   }
 
   [class*="blk-650"][class*="-mdg"] > * + * {
-    margin-top: calc(var(--vm) * 0.7);
+    margin-top: calc(var(--vm) * 0.7) !important;
   }
 }

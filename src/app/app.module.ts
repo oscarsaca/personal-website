@@ -13,7 +13,7 @@ import { BackgroundPlanetsComponent } from './components/mainstage/background-pl
 import { MountainsComponent } from './components/mainstage/mountains/mountains.component';
 import { InfoComponent } from './components/mainstage/header/info/info.component';
 import { TaglineComponent } from './components/mainstage/header/tagline/tagline.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { FooterComponent } from './components/footer/footer/footer.component';
 import { CopyrightComponent } from './components/footer/copyright/copyright.component';
 
 @NgModule({

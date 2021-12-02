@@ -1,0 +1,6 @@
+// 1024px Responsive (max-width)
+@media screen and (max-width: 1024px) {
+  p {
+    margin: calc(var(--vm) * 0.55) auto calc(var(--vm) * 0.7);
+  }
+}

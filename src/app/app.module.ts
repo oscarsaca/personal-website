@@ -9,6 +9,7 @@ import { NavigationLinkComponent } from './components/navigation-link/navigation
 import { SkipToContentComponent } from './components/skip-to-content/skip-to-content.component';
 import { MainstageComponent } from './components/mainstage/mainstage/mainstage.component';
 import { FilmLinesComponent } from './components/mainstage/film-lines/film-lines.component';
+import { BackgroundPlanetsComponent } from './components/mainstage/background-planets/background-planets.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FilmLinesComponent } from './components/mainstage/film-lines/film-lines
     SkipToContentComponent,
     MainstageComponent,
     FilmLinesComponent,
+    BackgroundPlanetsComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

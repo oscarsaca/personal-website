@@ -11,10 +11,7 @@ import { MainstageComponent } from './components/mainstage/mainstage/mainstage.c
 import { FilmLinesComponent } from './components/mainstage/film-lines/film-lines.component';
 import { BackgroundPlanetsComponent } from './components/mainstage/background-planets/background-planets.component';
 import { MountainsComponent } from './components/mainstage/mountains/mountains.component';
-import { MainstageHeaderComponent } from './components/mainstage/mainstage-header/mainstage-header.component';
-import { TaglineTopComponent } from './components/mainstage/header/tagline-top/tagline-top.component';
-import { TaglineMiddleComponent } from './components/mainstage/header/tagline-middle/tagline-middle.component';
-import { TaglineBottomComponent } from './components/mainstage/header/tagline-bottom/tagline-bottom.component';
+import { InfoComponent } from './components/mainstage/header/info/info.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +24,7 @@ import { TaglineBottomComponent } from './components/mainstage/header/tagline-bo
     FilmLinesComponent,
     BackgroundPlanetsComponent,
     MountainsComponent,
-    MainstageHeaderComponent,
-    TaglineTopComponent,
-    TaglineMiddleComponent,
-    TaglineBottomComponent,
+    InfoComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

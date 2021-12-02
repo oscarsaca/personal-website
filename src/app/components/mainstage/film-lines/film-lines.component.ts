@@ -8,6 +8,6 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 })
 export class FilmLinesComponent {
   @HostBinding('class') get addClasses() {
-    return `dp:blk bg usr-scl psu-bfr hdn`;
+    return `bg usr-scl psu-bfr hdn`;
   }
 }

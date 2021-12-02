@@ -10,6 +10,7 @@ import { SkipToContentComponent } from './components/skip-to-content/skip-to-con
 import { MainstageComponent } from './components/mainstage/mainstage/mainstage.component';
 import { FilmLinesComponent } from './components/mainstage/film-lines/film-lines.component';
 import { BackgroundPlanetsComponent } from './components/mainstage/background-planets/background-planets.component';
+import { MountainsComponent } from './components/mainstage/mountains/mountains.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BackgroundPlanetsComponent } from './components/mainstage/background-pl
     MainstageComponent,
     FilmLinesComponent,
     BackgroundPlanetsComponent,
+    MountainsComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

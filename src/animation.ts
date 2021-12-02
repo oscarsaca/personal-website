@@ -33,7 +33,7 @@ function fade(type?: 'in' | 'out') {
     animation.push(
       transition(':enter', [
         style({ opacity: '0' }),
-        animate('3000ms 200ms ease-out', style({ opacity: '1' })),
+        animate('300ms 200ms ease-out', style({ opacity: '1' })),
       ])
     );
   }

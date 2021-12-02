@@ -8,6 +8,6 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 })
 export class MainstageComponent {
   @HostBinding('class') get addClasses() {
-    return `dp:blk ta:c rel hdn fun-cursor`;
+    return `dp:blk hp: ta:c rel hdn fun-cursor`;
   }
 }

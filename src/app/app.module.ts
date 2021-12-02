@@ -11,6 +11,7 @@ import { MainstageComponent } from './components/mainstage/mainstage/mainstage.c
 import { FilmLinesComponent } from './components/mainstage/film-lines/film-lines.component';
 import { BackgroundPlanetsComponent } from './components/mainstage/background-planets/background-planets.component';
 import { MountainsComponent } from './components/mainstage/mountains/mountains.component';
+import { MainstageHeaderComponent } from './components/mainstage/mainstage-header/mainstage-header.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MountainsComponent } from './components/mainstage/mountains/mountains.c
     FilmLinesComponent,
     BackgroundPlanetsComponent,
     MountainsComponent,
+    MainstageHeaderComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

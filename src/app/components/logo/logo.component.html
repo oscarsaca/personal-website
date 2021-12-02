@@ -1,5 +1,11 @@
 <!-- Logo SVG -->
-<svg class="lg" viewBox="0 0 500 450" width="500" height="450">
+<svg
+  class="lg"
+  role="presentation"
+  viewBox="0 0 500 450"
+  width="500"
+  height="450"
+>
   <g filter="url(#shadow)" stroke="url(#gradient)">
     <circle class="bg-o" cx="248.8" cy="225" r="200.8"></circle>
     <path
@@ -10,10 +16,10 @@
 </svg>
 
 <!-- Title -->
-<strong class="ttl-1">{{ logoText }}</strong>
+<strong class="ttl-1" title="logoText">{{ logoText }}</strong>
 
 <!-- Gradient & Animation -->
-<svg class="pc-out">
+<svg class="pc-out" role="presentation">
   <defs>
     <filter id="shadow">
       <feDropShadow dx="8" dy="8" stdDeviation="2"></feDropShadow>

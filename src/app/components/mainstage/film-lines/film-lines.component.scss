@@ -37,14 +37,14 @@
 // 651px Responsive (min-width) & 800px (max-width)
 @media screen and (max-width: 800px) and (min-width: 651px) {
   :host {
-    --mainstage-height: 35em;
+    --mainstage-lines-height: 74%;
   }
 }
 
 // 801px Responsive (min-width) & 1024px (max-width)
 @media screen and (max-width: 1024px) and (min-width: 801px) {
   :host {
-    --mainstage-height: 40em;
+    --mainstage-lines-height: 80%;
   }
 }
 

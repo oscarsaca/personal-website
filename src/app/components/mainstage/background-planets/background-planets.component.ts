@@ -8,6 +8,6 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 })
 export class BackgroundPlanetsComponent {
   @HostBinding('class') get addClasses() {
-    return `d:blk bg usr-scl psu-bfr psu-aft`;
+    return `bg usr-scl psu-bfr psu-aft`;
   }
 }

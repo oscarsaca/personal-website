@@ -13,7 +13,7 @@
   transform: translate(-50%, 3em);
   background-image: url("/assets/images/planet-img.png");
   background-position: bottom center;
-  animation: float 3.9s ease forwards 0.2s;
+  animation: float 1.5s ease forwards 0.2s;
 }
 
 :host::after {
@@ -22,7 +22,7 @@
   transform: translateY(2em);
   background-image: url("/assets/images/moon-img.png");
   background-position: center;
-  animation: float 4.9s ease forwards 0.2s;
+  animation: float 3s ease forwards 0.2s;
 }
 
 @keyframes float {

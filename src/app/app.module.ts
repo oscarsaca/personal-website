@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { NavigationLinkComponent } from './components/navigation-link/navigation-link.component';
 import { SkipToContentComponent } from './components/skip-to-content/skip-to-content.component';
+import { MainstageComponent } from './components/mainstage/mainstage/mainstage.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SkipToContentComponent } from './components/skip-to-content/skip-to-con
     LogoComponent,
     NavigationLinkComponent,
     SkipToContentComponent,
+    MainstageComponent,
   ],
   imports: [BrowserModule],
   providers: [],

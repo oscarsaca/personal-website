@@ -149,11 +149,11 @@ img[style*=".jpg"] {
 // 1025px Responsive (min-width)
 @media screen and (min-width: 1025px) {
   .fun-cursor {
-    cursor: url("/assets/pew-pew.png") 25 25, auto;
+    cursor: url("/assets/images/pew-pew.png") 25 25, auto;
   }
 
   .fun-cursor:active {
-    cursor: url("/assets/boom-boom.png") 22 20, auto;
+    cursor: url("/assets/images/boom-boom.png") 22 20, auto;
   }
 
   .bx[dt-sz="1025"] {

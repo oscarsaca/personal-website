@@ -7,6 +7,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { NavigationLinkComponent } from './components/navigation-link/navigation-link.component';
 import { SkipToContentComponent } from './components/skip-to-content/skip-to-content.component';
 import { MainstageComponent } from './components/mainstage/mainstage/mainstage.component';
+import { FilmLinesComponent } from './components/mainstage/film-lines/film-lines.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MainstageComponent } from './components/mainstage/mainstage/mainstage.c
     NavigationLinkComponent,
     SkipToContentComponent,
     MainstageComponent,
+    FilmLinesComponent,
   ],
   imports: [BrowserModule],
   providers: [],

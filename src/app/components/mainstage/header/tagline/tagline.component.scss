@@ -1,0 +1,10 @@
+strong {
+  margin-top: 0.355em;
+}
+
+// 800px Responsive (max-width)
+@media screen and (max-width: 800px) {
+  span {
+    display: block;
+  }
+}

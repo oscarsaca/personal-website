@@ -1,4 +1,10 @@
-import { animate, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  style,
+  transition,
+  trigger,
+  state,
+} from '@angular/animations';
 
 /* Exported animations: */
 
@@ -47,3 +53,59 @@ function fade(type?: 'in' | 'out') {
   }
   return animation;
 }
+
+/* Mainstage Animations: */
+
+export const heySVG = trigger('heySVG', [
+  state(
+    'start',
+    style({
+      transform: 'translateY(3em)',
+      opacity: 0,
+    })
+  ),
+  state(
+    'final',
+    style({
+      transform: 'translateY(0)',
+      opacity: 1,
+    })
+  ),
+  transition('start => end', animate('1.4s 0.1s ease')),
+]);
+
+export const oscarSVG = trigger('oscarSVG', [
+  state(
+    'start',
+    style({
+      transform: 'translateY(3em)',
+      opacity: 0,
+    })
+  ),
+  state(
+    'final',
+    style({
+      transform: 'translateY(0)',
+      opacity: 1,
+    })
+  ),
+  transition('start => end', animate('1.2s 0.3s ease')),
+]);
+
+export const tagline = trigger('tagline', [
+  state(
+    'start',
+    style({
+      transform: 'translateY(3em)',
+      opacity: 0,
+    })
+  ),
+  state(
+    'final',
+    style({
+      transform: 'translateY(0)',
+      opacity: 1,
+    })
+  ),
+  transition('start => end', animate('0.9s 0.6s ease')),
+]);

@@ -3,6 +3,24 @@
   z-index: 2;
 }
 
+h1 {
+  font-size: 1em;
+
+  svg {
+    height: auto;
+  }
+
+  .hey {
+    width: 8em;
+    left: -2.4em;
+    margin-bottom: -1.65em;
+  }
+
+  .oscar {
+    width: 30.227em;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   :host {
     --mstg-inf-tp: 9.109em;
@@ -14,12 +32,27 @@
   :host {
     --mstg-inf-tp: 7em;
   }
+
+  h1 {
+    font-size: 0.994em;
+  }
+}
+
+// 1024px Responsive (max-width)
+@media screen and (max-width: 1024px) {
+  .oscar path {
+    fill: url(#gradient);
+  }
 }
 
 // 651px Responsive (min-width) & 800px (max-width)
 @media screen and (max-width: 800px) and (min-width: 651px) {
   :host {
     --mstg-inf-tp: 5em;
+  }
+
+  h1 {
+    font-size: 0.75em;
   }
 }
 
@@ -36,6 +69,10 @@
     --mstg-inf-tp: 12%;
     --mstg-inf-bp: 40%;
   }
+
+  h1 {
+    font-size: 0.72em;
+  }
 }
 
 /* 500px Responsive (max-width) */
@@ -43,5 +80,13 @@
   :host {
     --mstg-inf-tp: 20%;
     --mstg-inf-bp: 43%;
+  }
+
+  h1 {
+    font-size: 0.6em;
+
+    .hey {
+      left: -1.4rem;
+    }
   }
 }

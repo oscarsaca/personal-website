@@ -12,6 +12,7 @@ import { FilmLinesComponent } from './components/mainstage/film-lines/film-lines
 import { BackgroundPlanetsComponent } from './components/mainstage/background-planets/background-planets.component';
 import { MountainsComponent } from './components/mainstage/mountains/mountains.component';
 import { InfoComponent } from './components/mainstage/header/info/info.component';
+import { TaglineComponent } from './components/mainstage/header/tagline/tagline.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { InfoComponent } from './components/mainstage/header/info/info.component
     BackgroundPlanetsComponent,
     MountainsComponent,
     InfoComponent,
+    TaglineComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

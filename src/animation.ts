@@ -6,33 +6,13 @@ import {
   state,
 } from '@angular/animations';
 
-/* Exported animations: */
-
-/**
- * Fade-In Angular Animation\
- * Properties adjusted: opacity\
- * Transition: 300ms ease-out\
- * Trigger: @fadeIn, on :enter
- */
+// Functions for generating re-usable animations:
 export const fadeIn = trigger('fadeIn', fade('in'));
 
-/**
- * Fade-Out Angular Animation\
- * Properties adjusted: opacity\
- * Transition: 300ms ease-in\
- * Trigger: @fadeOut, on :leave
- */
 export const fadeOut = trigger('fadeOut', fade('out'));
 
-/**
- * Fade-In-Out Angular Animation\
- * Properties adjusted: opacity\
- * Transition: 300ms ease-in/ease-out \
- * Trigger: @fadeInOut, on :enter and :leave
- */
 export const fadeInOut = trigger('fadeInOut', fade());
 
-/* Functions for generating re-usable animations: */
 function fade(type?: 'in' | 'out') {
   const animation = [];
   if (type === 'in' || !type) {
@@ -54,8 +34,7 @@ function fade(type?: 'in' | 'out') {
   return animation;
 }
 
-/* Mainstage Animations: */
-
+// Mainstage Animations:
 export const heySVG = trigger('heySVG', [
   state(
     'start',
@@ -65,7 +44,7 @@ export const heySVG = trigger('heySVG', [
     })
   ),
   state(
-    'final',
+    'end',
     style({
       transform: 'translateY(0)',
       opacity: 1,
@@ -83,7 +62,7 @@ export const oscarSVG = trigger('oscarSVG', [
     })
   ),
   state(
-    'final',
+    'end',
     style({
       transform: 'translateY(0)',
       opacity: 1,
@@ -101,11 +80,66 @@ export const tagline = trigger('tagline', [
     })
   ),
   state(
-    'final',
+    'end',
     style({
       transform: 'translateY(0)',
       opacity: 1,
     })
   ),
   transition('start => end', animate('0.9s 0.6s ease')),
+]);
+
+// Logo Animation
+export const logoO = trigger('logoO', [
+  state(
+    'start',
+    style({
+      strokeDasharray: '1262',
+      strokeDashoffset: '1262',
+    })
+  ),
+  state(
+    'end',
+    style({
+      strokeDasharray: '1262',
+      strokeDashoffset: '0',
+    })
+  ),
+  transition('start => end', animate('.8s 0.4s linear')),
+]);
+
+export const logoS = trigger('logoS', [
+  state(
+    'start',
+    style({
+      strokeDasharray: '1259',
+      strokeDashoffset: '1259',
+    })
+  ),
+  state(
+    'end',
+    style({
+      strokeDasharray: '1259',
+      strokeDashoffset: '0',
+    })
+  ),
+  transition('start => end', animate('1.2s 0s linear')),
+]);
+
+export const logoText = trigger('logoText', [
+  state(
+    'start',
+    style({
+      transform: 'translateY(-0.769rem)',
+      opacity: 0,
+    })
+  ),
+  state(
+    'end',
+    style({
+      transform: 'translateY(0)',
+      opacity: 1,
+    })
+  ),
+  transition('start => end', animate('1s 1s ease')),
 ]);

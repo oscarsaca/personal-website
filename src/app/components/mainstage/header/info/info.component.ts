@@ -4,6 +4,7 @@ import {
   HostBinding,
   AfterViewInit,
   ChangeDetectorRef,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 
 @Component({
@@ -11,6 +12,7 @@ import {
   templateUrl: './info.component.html',
   styleUrls: ['./info.component.scss'],
   animations: [heySVG, oscarSVG, tagline],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InfoComponent implements AfterViewInit {
   title: string = `Hey, I'm Oscar`;

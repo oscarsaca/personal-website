@@ -235,13 +235,6 @@ img[style*=".jpg"] {
   }
 }
 
-// 1200px Responsive (max-width)
-@media screen and (max-width: 1200px) {
-  :root {
-    --font-bump: 1.222em;
-  }
-}
-
 // 1024px Responsive (max-width)
 @media screen and (max-width: 1024px) {
   [class*="blk-1024"] {

@@ -15,6 +15,7 @@ import { InfoComponent } from './components/mainstage/header/info/info.component
 import { TaglineComponent } from './components/mainstage/header/tagline/tagline.component';
 import { FooterComponent } from './components/footer/footer/footer.component';
 import { CopyrightComponent } from './components/footer/copyright/copyright.component';
+import { SocialLinkComponent } from './components/footer/social-link/social-link.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CopyrightComponent } from './components/footer/copyright/copyright.comp
     TaglineComponent,
     FooterComponent,
     CopyrightComponent,
+    SocialLinkComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

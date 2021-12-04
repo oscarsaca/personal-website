@@ -16,6 +16,10 @@
   background-color: var(--accent-dark);
 }
 
+app-social-link + app-social-link {
+  margin-left: 0.545em;
+}
+
 // 1201px Responsive (min-width)
 @media screen and (min-width: 1201px) {
   .bx::before {

@@ -6,26 +6,42 @@
   width="500"
   height="450"
 >
-  <g filter="url(#shadow)" stroke="url(#gradient)">
-    <circle
-      class="bg-o"
-      [@logoO]="state"
-      cx="248.8"
-      cy="225"
-      r="200.8"
-    ></circle>
-    <path
-      class="bg-s"
-      [@logoS]="state"
-      d="M 73.2 322.6 L 40 345.2 c -44.3 34.2 5 100.2 56.4 64.6 L 338 271.6 c 35.1 -18.6 2 -96.1 -43.6 -69.7 l -93.6 44.5 c -39.2 18.9 -77.9 -50.6 -44.1 -69.7 L 404.2 38.5 c 50.4 -33 100.6 20.7 56.3 60.6 c -16.1 14.5 -36.4 27.7 -36.4 27.7"
-    ></path>
-  </g>
+  <ng-container *ngIf="animate">
+    <g filter="url(#shadow)" stroke="url(#gradient)">
+      <circle
+        class="bg-o"
+        [@logoO]="state"
+        cx="248.8"
+        cy="225"
+        r="200.8"
+      ></circle>
+      <path
+        class="bg-s"
+        [@logoS]="state"
+        d="M 73.2 322.6 L 40 345.2 c -44.3 34.2 5 100.2 56.4 64.6 L 338 271.6 c 35.1 -18.6 2 -96.1 -43.6 -69.7 l -93.6 44.5 c -39.2 18.9 -77.9 -50.6 -44.1 -69.7 L 404.2 38.5 c 50.4 -33 100.6 20.7 56.3 60.6 c -16.1 14.5 -36.4 27.7 -36.4 27.7"
+      ></path>
+    </g>
+  </ng-container>
+  <ng-container *ngIf="!animate">
+    <g filter="url(#shadow)" stroke="url(#gradient)">
+      <circle class="bg-o" cx="248.8" cy="225" r="200.8"></circle>
+      <path
+        class="bg-s"
+        d="M 73.2 322.6 L 40 345.2 c -44.3 34.2 5 100.2 56.4 64.6 L 338 271.6 c 35.1 -18.6 2 -96.1 -43.6 -69.7 l -93.6 44.5 c -39.2 18.9 -77.9 -50.6 -44.1 -69.7 L 404.2 38.5 c 50.4 -33 100.6 20.7 56.3 60.6 c -16.1 14.5 -36.4 27.7 -36.4 27.7"
+      ></path>
+    </g>
+  </ng-container>
 </svg>
 
 <!-- Title -->
-<strong class="ttl-1" title="logoText" [@logoText]="state">{{
-  logoText
-}}</strong>
+<ng-container *ngIf="animate">
+  <strong class="ttl-1" title="logoText" [@logoText]="state">{{
+    logoText
+  }}</strong>
+</ng-container>
+<ng-container *ngIf="!animate">
+  <strong class="ttl-1" title="logoText">{{ logoText }}</strong>
+</ng-container>
 
 <!-- Gradient & Animation -->
 <svg class="pc-out" role="presentation">

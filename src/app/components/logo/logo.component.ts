@@ -5,6 +5,7 @@ import {
   ChangeDetectorRef,
   Component,
   HostBinding,
+  Input,
 } from '@angular/core';
 
 @Component({
@@ -17,6 +18,8 @@ import {
 export class LogoComponent implements AfterViewInit {
   logoText: string = 'Oscar Saca';
   state: string = 'start';
+
+  @Input() animate: boolean = false;
 
   @HostBinding('class') get addClasses() {
     return `nlf-middle`;

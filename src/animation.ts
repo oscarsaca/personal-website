@@ -79,7 +79,7 @@ export const heySVG = trigger('heySVG', [
   transition('start => end', animate('1.4s 0.1s ease')),
 ]);
 
-// Mainstage Animations: Sscar
+// Mainstage Animations: Oscar
 export const oscarSVG = trigger('oscarSVG', [
   state(
     'start',

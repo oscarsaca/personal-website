@@ -9,9 +9,9 @@
   --g-trs: 0.3s ease 0s; // global transition
 
   //spacing
-  --vp: 3em; // vertical padding
+  --vp: 3rem; // vertical padding
   --hp: 4%; // horizontal padding
-  --vm: 2.5em; // vertical margin
+  --vm: 2.5rem; // vertical margin
 
   // sizes
   --full: 100%;
@@ -70,6 +70,7 @@
   :root {
     --ttl-1-fs: 1.667rem;
     --ttl-1-sm-fs: 1.222rem;
+    --font-bump: 1.222em;
     --bdr-sz: 4em;
   }
 }

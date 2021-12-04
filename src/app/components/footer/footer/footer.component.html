@@ -12,6 +12,12 @@
       ></app-copyright>
 
       <!-- Social Links -->
+      <div class="third nlf-middle-end ctr-1024">
+        <app-social-link
+          [link]="link"
+          *ngFor="let link of socialLinks"
+        ></app-social-link>
+      </div>
     </div>
   </div>
 </div>

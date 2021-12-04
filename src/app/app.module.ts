@@ -17,6 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CopyrightComponent } from './components/footer/copyright/copyright.component';
 import { SocialLinkComponent } from './components/social-link/social-link.component';
 import { SectionHeaderComponent } from './components/section-header/section-header.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ChartComponent } from './components/skills/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { SectionHeaderComponent } from './components/section-header/section-head
     CopyrightComponent,
     SocialLinkComponent,
     SectionHeaderComponent,
+    SkillsComponent,
+    ChartComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

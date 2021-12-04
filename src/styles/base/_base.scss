@@ -10,6 +10,9 @@
 a:not([class*="btn"]) {
   transition: color var(--g-trs);
 }
+main .sec + .sec {
+  padding-top: 0;
+}
 
 // sizes
 .full {

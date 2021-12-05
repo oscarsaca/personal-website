@@ -1,5 +1,24 @@
+.title {
+  margin-left: auto;
+
+  strong {
+    z-index: 1;
+
+    &::before {
+      background-color: var(--secondary-dark);
+      clip-path: polygon(calc(0% + 3em) 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+}
+
 // 1201px Responsive (min-width)
 @media screen and (min-width: 1201px) {
+  .title {
+    strong {
+      padding-right: 0;
+    }
+  }
+
   app-content {
     width: calc(var(--half) - 2.727em);
   }

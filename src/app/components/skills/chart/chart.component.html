@@ -1,7 +1,15 @@
 <div class="bx bg-bx-drk">
   <div class="deco-out psu-bfr psu-aft rel">
     <div class="deco-in hp: vp: psu-bfr psu-aft rel">
-      <canvas #SkillsChart width="1600" height="409"></canvas>
+      <ng-container *ngIf="screenWidth > 1025">
+        <canvas #SkillsChart height="374"></canvas>
+      </ng-container>
+      <ng-container *ngIf="screenWidth <= 1024 && screenWidth > 800">
+        <canvas #SkillsChart height="828"></canvas>
+      </ng-container>
+      <ng-container *ngIf="screenWidth <= 800">
+        <canvas #SkillsChart height="608"></canvas>
+      </ng-container>
     </div>
   </div>
 </div>

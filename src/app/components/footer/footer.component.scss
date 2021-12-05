@@ -5,15 +5,15 @@
 .bx {
   border-top: solid var(--bdr-tn) var(--secondary-dark);
   border-bottom: solid var(--bdr-tn) var(--secondary-dark);
-}
 
-.bx::before {
-  height: var(--bdr-tqq);
-  top: calc(var(--bdr-tn) * -1);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  background-color: var(--accent-dark);
+  &::before {
+    height: var(--bdr-tqq);
+    top: calc(var(--bdr-tn) * -1);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: var(--accent-dark);
+  }
 }
 
 app-social-link + app-social-link {

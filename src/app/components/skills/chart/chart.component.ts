@@ -7,9 +7,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { Chart, registerables } from 'chart.js';
-import { ChartsService } from 'src/app/services/charts.service';
-Chart.register(...registerables);
+import { ChartService } from 'src/app/services/chart.service';
 
 @Component({
   selector: 'app-chart',
@@ -20,9 +18,9 @@ Chart.register(...registerables);
 export class ChartComponent implements OnInit, AfterViewInit {
   @ViewChild('SkillsChart') chart!: ElementRef;
   @HostListener('window:resize', ['$event'])
-  screenWidth: any;
+  screenWidth!: number;
 
-  constructor(private chartsService: ChartsService) {}
+  constructor(private chartService: ChartService) {}
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;
@@ -32,12 +30,19 @@ export class ChartComponent implements OnInit, AfterViewInit {
     this.onWindowResize();
   }
 
+  getChart() {
+    // desktop
+    if (this.screenWidth > 1024) this.chartService.desktopChart(this.chart);
+    // tablet
+    if (this.screenWidth <= 1024 && this.screenWidth > 800)
+      this.chartService.tabletChart(this.chart);
+    // mobile
+    if (this.screenWidth <= 800) this.chartService.mobileChart(this.chart);
+  }
+
   onWindowResize() {
     this.screenWidth = window.innerWidth;
 
-    if (this.screenWidth > 1024) this.chartsService.desktopChart(this.chart);
-    if (this.screenWidth <= 1024 && this.screenWidth > 800)
-      this.chartsService.tabletChart(this.chart);
-    if (this.screenWidth <= 800) this.chartsService.mobileChart(this.chart);
+    this.getChart();
   }
 }

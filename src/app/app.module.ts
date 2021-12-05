@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
+import { MastheadComponent } from './components/masthead/masthead.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { NavigationLinkComponent } from './components/navigation-link/navigation-link.component';
 import { SkipToContentComponent } from './components/skip-to-content/skip-to-content.component';
@@ -16,11 +16,14 @@ import { TaglineComponent } from './components/mainstage/header/tagline/tagline.
 import { FooterComponent } from './components/footer/footer.component';
 import { CopyrightComponent } from './components/footer/copyright/copyright.component';
 import { SocialLinkComponent } from './components/social-link/social-link.component';
+import { SectionHeaderComponent } from './components/section-header/section-header.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ChartComponent } from './components/skills/chart/chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    MastheadComponent,
     LogoComponent,
     NavigationLinkComponent,
     SkipToContentComponent,
@@ -33,6 +36,9 @@ import { SocialLinkComponent } from './components/social-link/social-link.compon
     FooterComponent,
     CopyrightComponent,
     SocialLinkComponent,
+    SectionHeaderComponent,
+    SkillsComponent,
+    ChartComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

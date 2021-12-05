@@ -1,0 +1,20 @@
+// 1201px Responsive (min-width)
+@media screen and (min-width: 1201px) {
+  app-content {
+    width: calc(var(--half) - 2.727em);
+  }
+}
+
+// 1025px Responsive (min-width) & 1200px (max-width)
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+  app-content {
+    width: calc(60% - 2.272em);
+  }
+}
+
+// 1024px Responsive (max-width)
+@media screen and (max-width: 1024px) {
+  app-content {
+    width: 100%;
+  }
+}

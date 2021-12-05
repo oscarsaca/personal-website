@@ -19,6 +19,8 @@ import { SocialLinkComponent } from './components/social-link/social-link.compon
 import { SectionHeaderComponent } from './components/section-header/section-header.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ChartComponent } from './components/skills/chart/chart.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContentComponent } from './components/about/content/content.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { ChartComponent } from './components/skills/chart/chart.component';
     SectionHeaderComponent,
     SkillsComponent,
     ChartComponent,
+    AboutComponent,
+    ContentComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

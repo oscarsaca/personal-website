@@ -99,12 +99,19 @@ img[style*=".jpg"] {
 }
 
 // content
-.cnt-stl > *:first-child {
-  margin-top: 0;
-}
+.cnt-stl {
+  p {
+    margin-block-end: 1em;
+    margin-block-start: 1em;
+  }
 
-.cnt-stl > *:last-child {
-  margin-bottom: 0;
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // scroll

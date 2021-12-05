@@ -1,3 +1,26 @@
+.bx::before,
+.bx::after {
+  width: var(--bdr-sz);
+  height: var(--bdr-sz);
+  border-width: var(--bdr-tqq);
+  border-color: var(--accent-dark);
+  z-index: 2;
+}
+
+.bx::before {
+  left: auto;
+  right: 0;
+  border-top-style: solid;
+  border-right-style: solid;
+}
+
+.bx::after {
+  top: auto;
+  bottom: 0;
+  border-bottom-style: solid;
+  border-left-style: solid;
+}
+
 .title {
   margin-left: auto;
 
@@ -11,14 +34,52 @@
   }
 }
 
-// 1201px Responsive (min-width)
-@media screen and (min-width: 1201px) {
+.exp {
+  min-height: 25.727em;
+}
+
+.deco {
+  position: absolute;
+  top: var(--bdr-tn);
+  left: var(--bdr-tn);
+  width: calc(100% - (var(--bdr-tn) * 2));
+  height: calc(100% - (var(--bdr-tn) * 2));
+}
+
+/* 651px Responsive (min-width) */
+@media screen and (min-width: 651px) {
+  .exp {
+    padding: calc(var(--vp) * 0.9336);
+  }
+
+  .exp,
+  .deco {
+    clip-path: polygon(
+      50% 0,
+      100% 0,
+      100% 50%,
+      100% calc(100% - 3em),
+      calc(100% - 3em) 100%,
+      50% 100%,
+      0 100%,
+      0 50%,
+      0 3em,
+      3em 0
+    );
+  }
+}
+
+// 1025px Responsive (min-width)
+@media screen and (min-width: 1025px) {
   .title {
     strong {
       padding-right: 0;
     }
   }
+}
 
+// 1201px Responsive (min-width)
+@media screen and (min-width: 1201px) {
   app-content {
     width: calc(var(--half) - 2.727em);
   }
@@ -26,6 +87,14 @@
 
 // 1025px Responsive (min-width) & 1200px (max-width)
 @media screen and (max-width: 1200px) and (min-width: 1025px) {
+  .bx {
+    width: 40%;
+  }
+
+  .title {
+    width: calc(100% - 3em);
+  }
+
   app-content {
     width: calc(60% - 2.272em);
   }
@@ -35,5 +104,17 @@
 @media screen and (max-width: 1024px) {
   app-content {
     width: 100%;
+  }
+}
+
+/* 650px Responsive (max-width) */
+@media screen and (max-width: 650px) {
+  .title {
+    width: 100%;
+  }
+
+  .exp,
+  .deco {
+    padding: var(--vp) var(--hp);
   }
 }

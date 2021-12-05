@@ -176,7 +176,6 @@ img[style*=".jpg"] {
     opacity: 0;
     transform: translate(-50%, -0.5em);
     visibility: hidden;
-    will-change: opacity, transform, visibility;
     transition: opacity var(--g-trs), transform var(--g-trs),
       visibility 0s ease 0.3s;
   }

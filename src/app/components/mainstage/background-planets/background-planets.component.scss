@@ -1,7 +1,6 @@
 :host::before,
 :host::after {
   opacity: 0;
-  will-change: opacity, transform;
   background-size: contain;
   z-index: 1;
 }

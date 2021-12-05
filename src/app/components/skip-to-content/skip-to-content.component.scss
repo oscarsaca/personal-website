@@ -12,7 +12,6 @@
   top: 1rem;
   left: 1rem;
   z-index: 10;
-  will-change: opacity, transform;
   opacity: 0;
   transform: translateY(calc(-100% - 2em));
   transition: transform var(--btn-trs-t) ease 0s,

@@ -49,6 +49,12 @@ export class ChartService {
       options: {
         responsive: true,
         maintainAspectRatio: true,
+        layout: {
+          padding: {
+            bottom: -30,
+            left: -10,
+          },
+        },
         plugins: {
           legend: {
             display: false,
@@ -132,6 +138,12 @@ export class ChartService {
         responsive: true,
         maintainAspectRatio: true,
         indexAxis: 'y',
+        layout: {
+          padding: {
+            bottom: -5,
+            left: -5,
+          },
+        },
         plugins: {
           legend: {
             display: false,
@@ -214,6 +226,12 @@ export class ChartService {
         responsive: true,
         maintainAspectRatio: true,
         indexAxis: 'y',
+        layout: {
+          padding: {
+            bottom: -5,
+            left: -5,
+          },
+        },
         plugins: {
           legend: {
             display: false,

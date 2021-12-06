@@ -42,6 +42,6 @@ canvas {
 // 650px Responsive (max-width)
 @media screen and (max-width: 650px) {
   .deco-in {
-    padding: var(--vm) calc(var(--hp) * 0.83);
+    padding: calc(var(--vm) * 0.6) calc(var(--hp) * 0.7) calc(var(--vm) * 0.7);
   }
 }

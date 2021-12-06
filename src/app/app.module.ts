@@ -21,6 +21,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ChartComponent } from './components/skills/chart/chart.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContentComponent } from './components/about/content/content.component';
+import { ProfileImageComponent } from './components/about/profile-image/profile-image.component';
+import { ExterienceItemComponent } from './components/about/exterience-item/exterience-item.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { ContentComponent } from './components/about/content/content.component';
     ChartComponent,
     AboutComponent,
     ContentComponent,
+    ProfileImageComponent,
+    ExterienceItemComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

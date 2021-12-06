@@ -1,10 +1,11 @@
 <div class="mn">
   <!-- Header -->
-  <app-section-header title="About Oscar"></app-section-header>
+  <app-section-header class="mb:lg" title="About Oscar"></app-section-header>
 
   <div class="nlf-middle-between blk-1024-mgd">
-    <!-- Experience -->
+    <!-- Card -->
     <div class="half bx psu-bfr psu-aft rel">
+      <!-- Title -->
       <div class="half title nlf-end hdn">
         <strong class="full ttl-1 sm psu-bfr rel vp:tn hp: ta:c"
           >Oscar Saca</strong
@@ -12,6 +13,35 @@
       </div>
       <div class="exp bg-bx-lt nlf-middle-between-reverse blk-650-mgd rel">
         <span class="deco bg-bx-drk"></span>
+        <!-- Skills -->
+        <aside class="scroll rel">
+          <!-- Experience -->
+          <div class="mt:sm">
+            <h3 class="ttl-2">Experience</h3>
+            <app-exterience-item
+              [item]="item"
+              *ngFor="let item of experience"
+            ></app-exterience-item>
+          </div>
+          <!-- Education -->
+          <div class="mt:sm">
+            <h3 class="ttl-2">Education</h3>
+            <app-exterience-item
+              [item]="item"
+              *ngFor="let item of education"
+            ></app-exterience-item>
+          </div>
+          <!-- Languages -->
+          <div class="mt:sm">
+            <h3 class="ttl-2">Languages</h3>
+            <app-exterience-item
+              [item]="item"
+              *ngFor="let item of languages"
+            ></app-exterience-item>
+          </div>
+        </aside>
+        <!-- Image -->
+        <app-profile-image class="half rel"></app-profile-image>
       </div>
     </div>
     <!-- Bio/Content -->

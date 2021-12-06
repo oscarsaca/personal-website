@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostBinding,
+  Input,
+} from '@angular/core';
 
 @Component({
   selector: 'app-section-header',
@@ -8,4 +13,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class SectionHeaderComponent {
   @Input() title!: string;
+
+  @HostBinding('class') get addClasses() {
+    return `dp:blk`;
+  }
 }

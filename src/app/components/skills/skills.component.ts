@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 })
 export class SkillsComponent {
   @HostBinding('class') get addClasses() {
-    return `dp:blk sec vp:`;
+    return `dp:blk vp:`;
   }
   @HostBinding('attr.id') id = 'Skills';
 }

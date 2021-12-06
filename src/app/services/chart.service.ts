@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { ElementRef, Injectable } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
@@ -19,7 +19,7 @@ export class ChartService {
 
   data = [80, 90, 90, 90, 90, 90, 99, 99];
 
-  desktopChart(element: any) {
+  desktopChart(element: ElementRef) {
     const canvas = element.nativeElement;
 
     const gradientBG = canvas
@@ -107,7 +107,7 @@ export class ChartService {
     });
   }
 
-  tabletChart(element: any) {
+  tabletChart(element: ElementRef) {
     const canvas = element.nativeElement;
 
     const gradientBG = canvas
@@ -195,7 +195,7 @@ export class ChartService {
     });
   }
 
-  mobileChart(element: any) {
+  mobileChart(element: ElementRef) {
     const canvas = element.nativeElement;
 
     const gradientBG = canvas

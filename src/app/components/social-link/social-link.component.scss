@@ -3,22 +3,30 @@ a {
   padding: 0.682em;
   transition: background-color var(--g-trs);
 
+  &:focus {
+    background-color: var(--accent-dark);
+
+    svg {
+      fill: var(--light);
+    }
+  }
+
   svg {
     fill: var(--light);
     transition: fill var(--g-trs);
   }
 }
 
-// 1025px Responsive (min-width)
-@media screen and (min-width: 1025px) {
-  a:hover,
-  a:focus {
-    background-color: var(--accent-dark);
-  }
+// 801px Responsive (min-width)
+@media screen and (min-width: 801px) {
+  a {
+    &:focus {
+      background-color: var(--accent-dark);
 
-  a:hover svg,
-  a:focus svg {
-    fill: var(--light);
+      svg {
+        fill: var(--light);
+      }
+    }
   }
 
   [data-tip]::before {
@@ -44,8 +52,26 @@ a {
       visibility 0s ease 0.4s;
   }
 
-  [data-tip]:hover::before,
   [data-tip]:focus::before {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    visibility: visible;
+    transition: opacity var(--g-trs), transform var(--g-trs),
+      visibility 0s ease 0s;
+  }
+}
+
+// 1025px Responsive (min-width)
+@media screen and (min-width: 1025px) {
+  a:hover {
+    background-color: var(--accent-dark);
+  }
+
+  a:hover svg {
+    fill: var(--light);
+  }
+
+  [data-tip]:hover::before {
     opacity: 1;
     transform: translate(-50%, 0);
     visibility: visible;

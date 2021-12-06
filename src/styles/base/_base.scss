@@ -137,43 +137,6 @@ img[style*=".jpg"] {
   .fun-cursor:active {
     cursor: url("/assets/images/boom-boom.png") 22 20, auto;
   }
-
-  .bx[dt-sz="1025"] {
-    display: block;
-    visibility: visible;
-  }
-
-  [dt-tip]::before {
-    content: attr(data-tip);
-    white-space: nowrap;
-    pointer-events: none;
-    position: absolute;
-    bottom: calc(100% + 0.5rem);
-    left: 50%;
-    padding: 0.75em;
-    font-size: 0.6em;
-    line-height: 1;
-    font-weight: var(--ttl-2-fw);
-    text-transform: var(--ttl-2-tt);
-    letter-spacing: var(--ttl-2-ls);
-    color: var(--light);
-    background-color: var(--primary-dark);
-    border: solid 1px var(--accent-dark);
-    opacity: 0;
-    transform: translate(-50%, -0.5em);
-    visibility: hidden;
-    transition: opacity var(--g-trs), transform var(--g-trs),
-      visibility 0s ease 0.3s;
-  }
-
-  [dt-tip]:hover::before,
-  [dt-tip]:focus::before {
-    opacity: 1;
-    transform: translate(-50%, 0);
-    visibility: visible;
-    transition: opacity var(--g-trs), transform var(--g-trs),
-      visibility 0s ease 0s;
-  }
 }
 
 // 1921px Responsive (min-width)

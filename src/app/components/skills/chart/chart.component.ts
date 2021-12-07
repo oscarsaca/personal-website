@@ -27,7 +27,7 @@ export class ChartComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.onWindowResize();
+    this.getChart();
   }
 
   getChart() {
@@ -38,11 +38,5 @@ export class ChartComponent implements OnInit, AfterViewInit {
       this.chartService.tabletChart(this.chart);
     // mobile
     if (this.screenWidth <= 800) this.chartService.mobileChart(this.chart);
-  }
-
-  onWindowResize() {
-    this.screenWidth = window.innerWidth;
-
-    this.getChart();
   }
 }

@@ -1,3 +1,3 @@
-<strong class="ttl-2 sub">{{ item.subTitle }}</strong>
-<em class="mf">{{ item.infoOne }}</em>
-<em class="mf">{{ item.infoTwo }}</em>
+<strong *ngIf="item.subTitle" class="ttl-2 sub">{{ item.subTitle }}</strong>
+<em *ngIf="item.infoOne" class="mf">{{ item.infoOne }}</em>
+<em *ngIf="item.infoTwo" class="mf">{{ item.infoTwo }}</em>

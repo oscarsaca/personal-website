@@ -6,7 +6,7 @@
     viewBox="0 0 176 61"
     width="176"
     height="61"
-    [@heySVG]="state"
+    [@floatUp]="{ value: state, params: { transitionSpeed: 1400, delay: 100 } }"
   >
     <defs>
       <filter
@@ -45,7 +45,7 @@
     viewBox="0 0 665 199"
     width="665"
     height="199"
-    [@oscarSVG]="state"
+    [@floatUp]="{ value: state, params: { transitionSpeed: 1200, delay: 300 } }"
   >
     <defs>
       <filter filterUnits="userSpaceOnUse" id="filter" x="0px" y="0px">
@@ -75,5 +75,7 @@
   </svg>
 
   <!-- Tagline -->
-  <app-tagline [@tagline]="state"></app-tagline>
+  <app-tagline
+    [@floatUp]="{ value: state, params: { transitionSpeed: 900, delay: 600 } }"
+  ></app-tagline>
 </h1>

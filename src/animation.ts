@@ -60,8 +60,8 @@ function fade(type: 'in' | 'out') {
   return animation;
 }
 
-// Mainstage Animations: Hey, i'm
-export const heySVG = trigger('heySVG', [
+// Float-Up
+export const floatUp = trigger('floatUp', [
   state(
     'start',
     style({
@@ -76,45 +76,13 @@ export const heySVG = trigger('heySVG', [
       opacity: 1,
     })
   ),
-  transition('start => end', animate('1.4s 0.1s ease')),
-]);
-
-// Mainstage Animations: Oscar
-export const oscarSVG = trigger('oscarSVG', [
-  state(
-    'start',
-    style({
-      transform: 'translateY(3em)',
-      opacity: 0,
-    })
+  transition(
+    'start => end',
+    animate('{{transitionSpeed}}ms {{delay}}ms {{timingFunction}}'),
+    {
+      params: { transitionSpeed: 300, delay: 0, timingFunction: 'ease-out' },
+    }
   ),
-  state(
-    'end',
-    style({
-      transform: 'translateY(0)',
-      opacity: 1,
-    })
-  ),
-  transition('start => end', animate('1.2s 0.3s ease')),
-]);
-
-// Mainstage Animations: Tagline
-export const tagline = trigger('tagline', [
-  state(
-    'start',
-    style({
-      transform: 'translateY(3em)',
-      opacity: 0,
-    })
-  ),
-  state(
-    'end',
-    style({
-      transform: 'translateY(0)',
-      opacity: 1,
-    })
-  ),
-  transition('start => end', animate('0.9s 0.6s ease')),
 ]);
 
 // Logo Animation: 'O'
@@ -133,7 +101,7 @@ export const logoO = trigger('logoO', [
       strokeDashoffset: '0',
     })
   ),
-  transition('start => end', animate('.8s 0.4s linear')),
+  transition('start => end', animate('800ms 400ms linear')),
 ]);
 
 // Logo Animation: 'S'
@@ -152,7 +120,7 @@ export const logoS = trigger('logoS', [
       strokeDashoffset: '0',
     })
   ),
-  transition('start => end', animate('1.2s 0s linear')),
+  transition('start => end', animate('1200ms 0ms linear')),
 ]);
 
 // Logo Animation: Logo Text
@@ -171,5 +139,5 @@ export const logoText = trigger('logoText', [
       opacity: 1,
     })
   ),
-  transition('start => end', animate('1s 1s ease')),
+  transition('start => end', animate('1000ms 800ms ease-in-out')),
 ]);

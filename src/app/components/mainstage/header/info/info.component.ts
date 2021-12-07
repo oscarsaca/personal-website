@@ -1,4 +1,4 @@
-import { heySVG, oscarSVG, tagline } from './../../../../../animation';
+import { floatUp } from './../../../../../animation';
 import {
   Component,
   HostBinding,
@@ -11,7 +11,7 @@ import {
   selector: 'app-info',
   templateUrl: './info.component.html',
   styleUrls: ['./info.component.scss'],
-  animations: [heySVG, oscarSVG, tagline],
+  animations: [floatUp],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InfoComponent implements AfterViewInit {

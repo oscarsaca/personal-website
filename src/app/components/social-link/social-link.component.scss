@@ -3,14 +3,6 @@ a {
   padding: 0.682em;
   transition: background-color var(--g-trs);
 
-  &:focus {
-    background-color: var(--accent-dark);
-
-    svg {
-      fill: var(--light);
-    }
-  }
-
   svg {
     fill: var(--light);
     transition: fill var(--g-trs);
@@ -21,11 +13,17 @@ a {
 @media screen and (min-width: 801px) {
   a {
     &:focus {
-      background-color: var(--accent-dark);
+      animation: blink 0.9s ease infinite;
+    }
+  }
 
-      svg {
-        fill: var(--light);
-      }
+  @keyframes blink {
+    0%,
+    100% {
+      background-color: var(--secondary-dark);
+    }
+    50% {
+      background-color: var(--accent-dark);
     }
   }
 

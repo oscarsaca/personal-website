@@ -19,6 +19,8 @@ export class ChartService {
 
   data = [80, 90, 90, 90, 90, 90, 99, 99];
 
+  chart: any;
+
   desktopChart(element: ElementRef) {
     const canvas = element.nativeElement;
 
@@ -33,7 +35,7 @@ export class ChartService {
       .createLinearGradient(0, 0, 0, 400);
     gradientHover.addColorStop(0, '#fb1496');
     gradientHover.addColorStop(1, '#e79aaf');
-    new Chart(canvas, {
+    this.chart = new Chart(canvas, {
       type: 'bar',
       data: {
         labels: this.labels,
@@ -121,7 +123,7 @@ export class ChartService {
       .createLinearGradient(500, 0, 0, 0);
     gradientHover.addColorStop(0, '#fb1496');
     gradientHover.addColorStop(1, '#e79aaf');
-    new Chart(canvas, {
+    this.chart = new Chart(canvas, {
       type: 'bar',
       data: {
         labels: this.labels,
@@ -209,7 +211,7 @@ export class ChartService {
       .createLinearGradient(300, 0, 0, 0);
     gradientHover.addColorStop(0, '#fb1496');
     gradientHover.addColorStop(1, '#e79aaf');
-    new Chart(canvas, {
+    this.chart = new Chart(canvas, {
       type: 'bar',
       data: {
         labels: this.labels,
@@ -281,5 +283,9 @@ export class ChartService {
         },
       },
     });
+  }
+
+  destroyChart() {
+    this.chart.destroy();
   }
 }

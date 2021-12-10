@@ -16,9 +16,14 @@ import { ChartService } from 'src/app/services/chart.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChartComponent implements OnInit, AfterViewInit {
-  @ViewChild('SkillsChart') chart!: ElementRef;
-  @HostListener('window:resize', ['$event'])
   screenWidth!: number;
+
+  @ViewChild('SkillsChart') chart!: ElementRef;
+  @HostListener('window:resize', ['$event']) onResize() {
+    this.screenWidth = window.innerWidth;
+    this.chartService.destroyChart();
+    setTimeout(() => this.displayChart());
+  }
 
   constructor(private chartService: ChartService) {}
 
@@ -27,10 +32,10 @@ export class ChartComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.getChart();
+    this.displayChart();
   }
 
-  getChart() {
+  displayChart() {
     // desktop
     if (this.screenWidth > 1024) this.chartService.desktopChart(this.chart);
     // tablet

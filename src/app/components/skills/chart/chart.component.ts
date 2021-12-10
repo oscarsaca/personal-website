@@ -20,14 +20,12 @@ export class ChartComponent implements OnInit, AfterViewInit {
 
   @ViewChild('SkillsChart') chart!: ElementRef;
   @HostListener('window:resize', ['$event']) onResize() {
-    this.screenWidth = window.innerWidth;
-    this.chartService.destroyChart();
-    setTimeout(() => this.displayChart());
+    this.resizeChart();
   }
 
   constructor(private chartService: ChartService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.screenWidth = window.innerWidth;
   }
 
@@ -35,13 +33,16 @@ export class ChartComponent implements OnInit, AfterViewInit {
     this.displayChart();
   }
 
-  displayChart() {
-    // desktop
+  displayChart(): void {
     if (this.screenWidth > 1024) this.chartService.desktopChart(this.chart);
-    // tablet
     if (this.screenWidth <= 1024 && this.screenWidth > 800)
       this.chartService.tabletChart(this.chart);
-    // mobile
     if (this.screenWidth <= 800) this.chartService.mobileChart(this.chart);
+  }
+
+  resizeChart(): void {
+    this.screenWidth = window.innerWidth;
+    this.chartService.destroyChart();
+    setTimeout(() => this.displayChart());
   }
 }

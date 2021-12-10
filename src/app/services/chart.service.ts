@@ -35,6 +35,7 @@ export class ChartService {
       .createLinearGradient(0, 0, 0, 400);
     gradientHover.addColorStop(0, '#fb1496');
     gradientHover.addColorStop(1, '#e79aaf');
+
     this.chart = new Chart(canvas, {
       type: 'bar',
       data: {
@@ -50,7 +51,7 @@ export class ChartService {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         layout: {
           padding: {
             bottom: -30,
@@ -123,6 +124,7 @@ export class ChartService {
       .createLinearGradient(500, 0, 0, 0);
     gradientHover.addColorStop(0, '#fb1496');
     gradientHover.addColorStop(1, '#e79aaf');
+
     this.chart = new Chart(canvas, {
       type: 'bar',
       data: {
@@ -138,7 +140,7 @@ export class ChartService {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         indexAxis: 'y',
         layout: {
           padding: {
@@ -211,6 +213,7 @@ export class ChartService {
       .createLinearGradient(300, 0, 0, 0);
     gradientHover.addColorStop(0, '#fb1496');
     gradientHover.addColorStop(1, '#e79aaf');
+
     this.chart = new Chart(canvas, {
       type: 'bar',
       data: {
@@ -226,7 +229,7 @@ export class ChartService {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         indexAxis: 'y',
         layout: {
           padding: {

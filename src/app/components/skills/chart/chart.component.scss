@@ -36,6 +36,28 @@
 
 canvas {
   width: 100% !important;
+  height: 100% !important;
+}
+
+// 1025px Responsive (min-width)
+@media screen and (min-width: 1025px) {
+  .deco-in {
+    height: 22.091rem;
+  }
+}
+
+// 801px Responsive (min-width) & 1024px (max-width)
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  .deco-in {
+    height: 34.858rem;
+  }
+}
+
+// 800px Responsive (max-width)
+@media screen and (max-width: 800px) {
+  .deco-in {
+    height: 23.849rem;
+  }
 }
 
 // 650px Responsive (max-width)

@@ -20,6 +20,7 @@ export class ChartComponent implements OnInit, AfterViewInit {
 
   @ViewChild('SkillsChart') chart!: ElementRef;
   @HostListener('window:resize', ['$event']) onResize() {
+    if (this.screenWidth == window.innerWidth) return;
     this.resizeChart();
   }
 

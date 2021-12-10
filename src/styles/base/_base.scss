@@ -87,7 +87,8 @@ img[style*="background-image"] {
   background-repeat: no-repeat;
 }
 
-img[style*=".png"] {
+img[style*=".png"],
+img[style*=".webp"] {
   background-size: contain;
 }
 
@@ -131,11 +132,11 @@ img[style*=".jpg"] {
 // 1025px Responsive (min-width)
 @media screen and (min-width: 1025px) {
   .fun-cursor {
-    cursor: url("/assets/images/pew-pew.png") 25 25, auto;
+    cursor: url("/assets/images/pew-pew.webp") 25 25, auto;
   }
 
   .fun-cursor:active {
-    cursor: url("/assets/images/boom-boom.png") 22 20, auto;
+    cursor: url("/assets/images/boom-boom.webp") 22 20, auto;
   }
 }
 

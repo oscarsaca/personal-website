@@ -10,7 +10,7 @@
   height: 35.091em;
   left: 50%;
   transform: translate(-50%, 3em);
-  background-image: url("/assets/images/planet-img.png");
+  background-image: url("/assets/images/planet-img.webp");
   background-position: bottom center;
   animation: float 1.5s ease forwards 0.2s;
 }
@@ -19,7 +19,7 @@
   width: 9.409em;
   height: 9.545em;
   transform: translateY(2em);
-  background-image: url("/assets/images/moon-img.png");
+  background-image: url("/assets/images/moon-img.webp");
   background-position: center;
   animation: float 3s ease forwards 0.2s;
 }

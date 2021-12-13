@@ -1,4 +1,4 @@
-import { logoO, logoS, logoText } from './../../../animation';
+import { floatUp, drawSVG } from './../../../animation';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -12,7 +12,7 @@ import {
   selector: 'app-logo',
   templateUrl: './logo.component.html',
   styleUrls: ['./logo.component.scss'],
-  animations: [logoO, logoS, logoText],
+  animations: [floatUp, drawSVG],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LogoComponent implements AfterViewInit {

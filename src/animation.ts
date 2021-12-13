@@ -65,9 +65,15 @@ export const floatUp = trigger('floatUp', [
   state(
     'start',
     style({
-      transform: 'translateY(3em)',
+      transform: 'translateY({{translateStart}}{{unitType}})',
       opacity: 0,
-    })
+    }),
+    {
+      params: {
+        translateStart: 3,
+        unitType: 'em',
+      },
+    }
   ),
   state(
     'end',
@@ -80,64 +86,50 @@ export const floatUp = trigger('floatUp', [
     'start => end',
     animate('{{transitionSpeed}}ms {{delay}}ms {{timingFunction}}'),
     {
-      params: { transitionSpeed: 300, delay: 0, timingFunction: 'ease-out' },
+      params: {
+        transitionSpeed: 300,
+        delay: 0,
+        timingFunction: 'ease-out',
+      },
     }
   ),
 ]);
 
-// Logo Animation: 'O'
-export const logoO = trigger('logoO', [
+// Draw SVG's
+export const drawSVG = trigger('drawSVG', [
   state(
     'start',
     style({
-      strokeDasharray: '1262',
-      strokeDashoffset: '1262',
-    })
+      strokeDasharray: '{{strokeDasharrayStart}}',
+      strokeDashoffset: '{{strokeDasharrayStart}}',
+    }),
+    {
+      params: {
+        strokeDasharrayStart: 3000,
+      },
+    }
   ),
   state(
     'end',
     style({
-      strokeDasharray: '1262',
+      strokeDasharray: '{{strokeDasharrayEnd}}',
       strokeDashoffset: '0',
-    })
+    }),
+    {
+      params: {
+        strokeDasharrayEnd: 0,
+      },
+    }
   ),
-  transition('start => end', animate('800ms 400ms linear')),
-]);
-
-// Logo Animation: 'S'
-export const logoS = trigger('logoS', [
-  state(
-    'start',
-    style({
-      strokeDasharray: '1259',
-      strokeDashoffset: '1259',
-    })
+  transition(
+    'start => end',
+    animate('{{transitionSpeed}}ms {{delay}}ms {{timingFunction}}'),
+    {
+      params: {
+        transitionSpeed: 1000,
+        delay: 0,
+        timingFunction: 'linear',
+      },
+    }
   ),
-  state(
-    'end',
-    style({
-      strokeDasharray: '1259',
-      strokeDashoffset: '0',
-    })
-  ),
-  transition('start => end', animate('1200ms 0ms linear')),
-]);
-
-// Logo Animation: Logo Text
-export const logoText = trigger('logoText', [
-  state(
-    'start',
-    style({
-      transform: 'translateY(-0.769rem)',
-      opacity: 0,
-    })
-  ),
-  state(
-    'end',
-    style({
-      transform: 'translateY(0)',
-      opacity: 1,
-    })
-  ),
-  transition('start => end', animate('1000ms 800ms ease-in-out')),
 ]);

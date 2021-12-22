@@ -52,7 +52,7 @@
 <ng-container *ngIf="animate">
   <strong
     class="ttl-1"
-    title="logoText"
+    [title]="logoText"
     [@floatUp]="{
       value: state,
       params: {

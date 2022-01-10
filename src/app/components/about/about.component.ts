@@ -15,7 +15,7 @@ export class AboutComponent {
 
   experience: Skill[] = [
     {
-      subTitle: 'Software Engineer',
+      subTitle: 'Senior Software Engineer',
       infoOne: 'Scorpion',
       infoTwo: 'November 2021 - Present',
     },

@@ -23,6 +23,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContentComponent } from './components/about/content/content.component';
 import { ProfileImageComponent } from './components/about/profile-image/profile-image.component';
 import { ExterienceItemComponent } from './components/about/exterience-item/exterience-item.component';
+import { BackTopTopComponent } from './components/back-top-top/back-top-top.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ExterienceItemComponent } from './components/about/exterience-item/exte
     ContentComponent,
     ProfileImageComponent,
     ExterienceItemComponent,
+    BackTopTopComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

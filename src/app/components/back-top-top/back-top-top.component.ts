@@ -20,7 +20,7 @@ export class BackTopTopComponent {
     let docHeight = document.body.offsetHeight;
     let winHeight = window.innerHeight;
     let scrollPercent = scrollTop / (docHeight - winHeight);
-    let scrollPercentTotal = scrollPercent * 307.919;
+    let scrollPercentTotal = (1 - scrollPercent) * 307.919;
     this.path.nativeElement.style.strokeDashoffset = scrollPercentTotal;
   }
 

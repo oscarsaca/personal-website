@@ -68,10 +68,10 @@
   }
 }
 
-// 1024px Responsive (max-width)
-@media screen and (max-width: 1024px) {
+// 1921px Responsive (min-width)
+@media screen and (min-width: 1921px) {
   .prgs {
-    background-color: var(--secondary-dark);
+    right: calc(((100vw - 1920px) / 2) + 1.333rem);
   }
 }
 
@@ -81,5 +81,6 @@
     bottom: 1.111rem;
     right: 1.111rem;
     font-size: 1.333em;
+    background-color: var(--secondary-dark);
   }
 }

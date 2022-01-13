@@ -1,18 +1,19 @@
 .prgs {
   position: fixed;
-  right: 1.364em;
-  bottom: 1.364em;
-  width: 2.091em;
-  height: 2.091em;
-  border-radius: 100%;
+  right: 1.333em;
+  bottom: 1.333em;
+  width: 2.222em;
+  height: 2.222em;
+  border-radius: 50%;
+  background-color: transparent;
   z-index: 5;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transform: translateY(1rem);
   box-shadow: inset 0 0 0 2.5px var(--secondary-dark);
-  transition: opacity var(--g-trs), transform var(--g-trs),
-    visibility 0s ease 0.3s;
+  transition: background-color var(--g-trs), transform var(--g-trs),
+    transform var(--g-trs), visibility 0s ease 0.3s;
 
   &::before,
   &::after {
@@ -39,8 +40,8 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    transition: opacity var(--g-trs), transform var(--g-trs),
-      visibility 0s ease 0s;
+    transition: background-color var(--g-trs), opacity var(--g-trs),
+      transform var(--g-trs), visibility 0s ease 0s;
   }
 
   svg {
@@ -62,6 +63,11 @@
   .prgs {
     right: 1.364em;
     bottom: 1.364em;
+
+    &:hover,
+    &:focus {
+      background-color: var(--secondary-dark);
+    }
   }
 }
 

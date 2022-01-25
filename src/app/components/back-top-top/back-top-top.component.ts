@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-back-top-top',
+  selector: 'app-back-to-top',
   templateUrl: './back-top-top.component.html',
   styleUrls: ['./back-to-top.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

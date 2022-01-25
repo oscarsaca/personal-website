@@ -9,7 +9,7 @@ import {
 @Component({
   selector: 'app-back-top-top',
   templateUrl: './back-top-top.component.html',
-  styleUrls: ['./back-top-top.component.scss'],
+  styleUrls: ['./back-to-top.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BackTopTopComponent {
@@ -20,8 +20,7 @@ export class BackTopTopComponent {
     let docHeight = document.body.offsetHeight;
     let winHeight = window.innerHeight;
     let scrollPercent = scrollTop / (docHeight - winHeight);
-    let scrollPercentTotal = (1 - scrollPercent) * 307.919;
-    this.path.nativeElement.style.strokeDashoffset = scrollPercentTotal;
+    this.path.nativeElement.style.strokeDashoffset = (1 - scrollPercent) * 307.919;
   }
 
   get showButton() {

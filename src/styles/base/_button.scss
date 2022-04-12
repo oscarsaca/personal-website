@@ -7,10 +7,12 @@
   --btn-hp: 2em;
   --btn-bs: 200%;
   --btn-bp: 100%;
+  --btn-gap: 0.25rem;
   --btn-trs-t: 0.3s;
 }
 
 .btn {
+  display: inline-flex;
   font-size: var(--mn-fs);
   line-height: var(--btn-lh);
   font-weight: var(--btn-fw);
@@ -26,6 +28,10 @@
     var(--accent-dark)
   );
   transition: background-position var(--btn-trs-t) ease 0s;
+
+  &.has-icon {
+    gap: var(--btn-gap);
+  }
 }
 
 // 1025px Responsive (min-width)

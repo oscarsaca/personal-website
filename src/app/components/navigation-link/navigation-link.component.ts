@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
 
 export interface Link {
   name: string;
   href: string;
+  download?: boolean;
 }
 
 @Component({
@@ -13,4 +14,8 @@ export interface Link {
 })
 export class NavigationLinkComponent {
   @Input() link!: Link;
+
+  @HostBinding('class') get addClasses() {
+    return `nlf-middle-center`;
+  }
 }

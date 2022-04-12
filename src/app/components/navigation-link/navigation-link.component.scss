@@ -1,11 +1,11 @@
-a {
+a.link {
   transition: color var(--g-trs), text-shadow var(--g-trs);
   text-shadow: none;
 }
 
 // 1025px Responsive (min-width)
 @media screen and (min-width: 1025px) {
-  a {
+  a.link {
     &:hover,
     &:focus {
       text-shadow: 0 0 0.227em var(--light), 0 0 0.455em var(--light),

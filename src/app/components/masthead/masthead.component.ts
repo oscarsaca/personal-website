@@ -21,6 +21,11 @@ export class MastheadComponent {
       name: 'contact',
       href: '#Contact',
     },
+    {
+      name: 'resume',
+      href: '../../../assets/files/Oscar%20Saca%20Resume.pdf',
+      download: true,
+    },
   ];
 
   @HostBinding('class') get addClasses() {

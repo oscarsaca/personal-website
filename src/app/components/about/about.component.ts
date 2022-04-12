@@ -27,12 +27,12 @@ export class AboutComponent {
     {
       subTitle: 'Senior Web Developer',
       infoOne: 'Scorpion',
-      infoTwo: 'January 2017 - October 2017',
+      infoTwo: 'December 2016 - October 2017',
     },
     {
       subTitle: 'Front-End Developer',
       infoOne: 'Scorpion',
-      infoTwo: 'May 2015 - January 2017',
+      infoTwo: 'May 2015 - December 2016',
     },
   ];
 

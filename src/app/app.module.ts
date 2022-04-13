@@ -24,6 +24,8 @@ import { ContentComponent } from './components/about/content/content.component';
 import { ProfileImageComponent } from './components/about/profile-image/profile-image.component';
 import { ExterienceItemComponent } from './components/about/exterience-item/exterience-item.component';
 import { BackTopTopComponent } from './components/back-top-top/back-top-top.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,12 @@ import { BackTopTopComponent } from './components/back-top-top/back-top-top.comp
     ExterienceItemComponent,
     BackTopTopComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule],
+  imports: [BrowserModule, BrowserAnimationsModule, ServiceWorkerModule.register('ngsw-worker.js', {
+  enabled: environment.production,
+  // Register the ServiceWorker as soon as the application is stable
+  // or after 30 seconds (whichever comes first).
+  registrationStrategy: 'registerWhenStable:30000'
+})],
   providers: [],
   bootstrap: [AppComponent],
 })

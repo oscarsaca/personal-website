@@ -36,7 +36,9 @@
             ],
             "scripts": [],
             "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "ngswConfigPath": "ngsw-config.json",
+            "sourceMap": true,
+            "optimization": false
           },
           "configurations": {
             "production": {

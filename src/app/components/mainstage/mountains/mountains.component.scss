@@ -1,37 +1,43 @@
 :host {
+  --mountain-height: 21.76rem;
+}
+
+picture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) calc(var(--mountain-height) * .2), var(--primary-dark));
   z-index: 1;
 }
 
 img {
-  --mountain-height: 21.76rem;
   height: var(--mountain-height);
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), var(--primary-dark));
 }
 
 // 1200px Responsive (max-width)
 @media screen and (max-width: 1200px) {
-  img {
+  :host {
   --mountain-height: 32.861vw;
   }
 }
 
 // 1024px Responsive (max-width)
 @media screen and (max-width: 1024px) {
-  img {
+  :host {
   --mountain-height: 24.009vw;
   }
 }
 
 // 800px Responsive (max-width)
 @media screen and (max-width: 800px) {
-  img {
+  :host {
   --mountain-height: 31.565vw;
   }
 }
 
 // 500px Responsive (max-width)
 @media screen and (max-width: 500px) {
-  img {
+  :host {
   --mountain-height: 38.64vw;
   }
 }

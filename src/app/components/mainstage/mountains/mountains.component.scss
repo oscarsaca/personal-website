@@ -1,3 +1,37 @@
 :host {
   z-index: 1;
 }
+
+img {
+  --mountain-height: 21.76rem;
+  height: var(--mountain-height);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), var(--primary-dark));
+}
+
+// 1200px Responsive (max-width)
+@media screen and (max-width: 1200px) {
+  img {
+  --mountain-height: 32.861vw;
+  }
+}
+
+// 1024px Responsive (max-width)
+@media screen and (max-width: 1024px) {
+  img {
+  --mountain-height: 24.009vw;
+  }
+}
+
+// 800px Responsive (max-width)
+@media screen and (max-width: 800px) {
+  img {
+  --mountain-height: 31.565vw;
+  }
+}
+
+// 500px Responsive (max-width)
+@media screen and (max-width: 500px) {
+  img {
+  --mountain-height: 38.64vw;
+  }
+}

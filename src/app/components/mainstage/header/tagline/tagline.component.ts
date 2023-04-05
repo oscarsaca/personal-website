@@ -7,8 +7,8 @@ import { Component, HostBinding, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TaglineComponent {
-  taglineTop: string = `& I build things in `;
-  taglineBottom: string = `The Internet.`;
+  taglineTop: string = `& I build things on `;
+  taglineBottom: string = `The Interwebs.`;
 
   @HostBinding('class') get addClasses() {
     return `dp:blk usr-scl`;

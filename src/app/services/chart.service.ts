@@ -7,17 +7,17 @@ Chart.register(...registerables);
 })
 export class ChartService {
   labels = [
-    'R E A C T',
-    'A N G U L A R',
     'J S',
     'T S',
+    'A N G U L A R',
+    'R X J S',
     'S Q L',
     'P Y T H O N',
     'H T M L',
     'S C S S',
   ];
 
-  data = [80, 90, 90, 90, 90, 90, 99, 99];
+  data = [90, 90, 85, 80, 90, 85, 99, 99];
 
   chart: any;
 
